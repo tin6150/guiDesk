@@ -20,6 +20,7 @@ From: centos:7
 
 # copy files into the container 
 # https://singularity.lbl.gov/docs-recipes#:~:text=If%20you%20want%20to%20copy,a%20path%20in%20the%20container.
+# no destination means /
 %files
 	add_package.sh 
 

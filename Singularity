@@ -4,7 +4,7 @@
 # lightweight gui desktop (file manager, browser)
 # centos  7 
 # https://github.com/tin6150/guiDesk
-# https://singularity-hub.org/collections/...
+# https://singularity-hub.org/collections/4551
 
 
 BootStrap: docker
@@ -16,7 +16,11 @@ From: centos:7
 	This container is a CentOS  with a light GUI desktop (file manager, firefox)
   Pull and run via singularity hub:
 	singularity pull --name guiDesk.sif shub://tin6150/guiDesk
-	singularity exec guiDesk.sif xfe
+	Then run one of these commands:
+	singularity exec guiDesk.sif thunar    # xfce file manager
+	singularity exec guiDesk.sif ristretto # simple picture viewer
+	singularity exec guiDesk.sif mousepad  # simple text editor
+
 
 # copy files into the container 
 # https://singularity.lbl.gov/docs-recipes#:~:text=If%20you%20want%20to%20copy,a%20path%20in%20the%20container.

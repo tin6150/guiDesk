@@ -14,19 +14,19 @@ From: centos:7
 
 %help
 	This container is a CentOS  with a light GUI desktop (file manager, firefox)
-  Pull and run via singularity hub:
+	Pull and run via singularity hub:
 	singularity pull --name guiDesk.sif shub://tin6150/guiDesk
 	Then run one of these commands:
-	singularity exec guiDesk.sif thunar    # xfce file manager
-	singularity exec guiDesk.sif ristretto # simple picture viewer
-	singularity exec guiDesk.sif mousepad  # simple text editor
+	singularity exec guiDesk.sif thunar &    # xfce file manager
+	singularity exec guiDesk.sif ristretto & # simple picture viewer
+	singularity exec guiDesk.sif mousepad &  # simple text editor
+	Source: https://github.com/tin6150/guiDesk
 
-
-# copy files into the container 
-# https://singularity.lbl.gov/docs-recipes#:~:text=If%20you%20want%20to%20copy,a%20path%20in%20the%20container.
-# no destination means /
 %files
 	add_package.sh 
+	# copy files into the container 
+	# https://singularity.lbl.gov/docs-recipes#:~:text=If%20you%20want%20to%20copy,a%20path%20in%20the%20container.
+	# no destination means /
 
 %runscript
 	#echo "vim from inside the container..."
